@@ -11,6 +11,8 @@ You will need your MQTT broker IP address and port number if different from the 
 
 The base topic `wallpanel/mywallpanel` allows the device to send and receive MQTT commands or messages.   The base topic should be unique to each device if you want the device to operate independently from other devices running the same application in your network.  If all devices have the same base topic, then sending a command will mean all devices receive the command.
 
+⚠️ Please ensure, that your basetopic ends with a slash (`/`). Else sending commands to your wallpanel will fail without any errors.
+
 If needed, add your MQTT username and password.  The client id is the unique identifier of this device with the MQTT broker.  It can be changed, but should be different from other applications on the same network.  
 
 ![Client ID](/img/mqtt_client.png)
